@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tareas</title>
+<script>try{var m=localStorage.getItem("tareas.theme");if(m==="dark"||m==="light")document.documentElement.dataset.theme=m}catch(e){}</script>
+<link rel="stylesheet" href="styles.css">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#2f6fed">
+</head>
+<body>
+<div class="app">
+  <div class="layout">
+    <aside class="side">
+      <div class="top"><h1>Tareas</h1><div id="toolbar"></div></div>
+      <nav id="tabs"></nav>
+      <div id="sidebar"></div>
+    </aside>
+    <main class="main"><section id="view"></section></main>
+  </div>
+  <footer id="footer"></footer>
+</div>
+<!-- Orden: núcleo -> vistas/funciones -> arranque. Cada archivo en js/views es independiente. -->
+<script src="js/store.js"></script>
+<script src="js/app.js"></script>
+<script src="js/lib/quickdate.js"></script>
+<script src="js/views/hoy.js"></script>
+<script src="js/views/pendientes.js"></script>
+<script src="js/views/programadas.js"></script>
+<script src="js/views/completadas.js"></script>
+<script src="js/views/estadisticas.js"></script>
+<script src="js/views/actividad.js"></script>
+<script src="js/views/papelera.js"></script>
+<script src="js/features/nueva.js"></script>
+<script src="js/features/menu.js"></script>
+<script src="js/features/editor.js"></script>
+<script src="js/features/recordatorios.js"></script>
+<script src="js/features/datos.js"></script>
+<script src="js/features/sync.js"></script>
+<script src="js/features/tema.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
